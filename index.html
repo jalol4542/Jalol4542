@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Aqlvoy Akademiya — 4-7 yosh bolalarni maktabga tayyorlaydigan ta'lim markazi. Ingliz tili, Rus tili, Matematika.">
+  <meta name="keywords" content="maktabga tayyorlash, bolalar ta'limi, ingliz tili, rus tili, matematika, Toshkent, aqlvoy akademiya">
+  <meta property="og:title" content="Aqlvoy Akademiya — Bolalar Ta'lim Markazi">
+  <meta property="og:description" content="4-7 yosh bolalarni maktabga tayyorlaydigan zamonaviy ta'lim markazi. Ingliz tili, Rus tili, Matematika.">
+  <meta property="og:type" content="website">
+  <title>Aqlvoy Akademiya — Bolalar Ta'lim Markazi | 4-7 yosh</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Background Particles -->
+  <div class="bg-particles"></div>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="#" class="nav-logo">
+        <div class="logo-icon">📚</div>
+        <span>Aqlvoy</span>
+      </a>
+
+      <div class="nav-links" id="navLinks">
+        <a href="#hero" class="active" data-i18n="navHome">Bosh sahifa</a>
+        <a href="#courses" data-i18n="navCourses">Fanlar</a>
+        <a href="#instructors" data-i18n="navInstructors">O'qituvchilar</a>
+        <a href="#gallery" data-i18n="navGallery">Galereya</a>
+        <a href="#contact" data-i18n="navContact">Aloqa</a>
+
+        <div class="lang-switcher">
+          <button class="lang-btn active" data-lang="uz">UZ</button>
+          <button class="lang-btn" data-lang="ru">RU</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+        </div>
+      </div>
+
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Nav Overlay -->
+  <div class="nav-overlay" id="navOverlay"></div>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <img src="images/hero.png" alt="Bolalar ta'limi" loading="eager">
+    </div>
+    <div class="hero-overlay"></div>
+
+    <div class="container hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        <span data-i18n="heroBadge">4-7 yosh bolalar uchun ta'lim markazi</span>
+      </div>
+
+      <h1>
+        <span data-i18n="heroTitle1">Farzandingizni</span><br>
+        <span class="highlight" data-i18n="heroTitle2">Maktabga</span><br>
+        <span data-i18n="heroTitle3">Tayyorlang!</span>
+      </h1>
+
+      <p class="hero-description" data-i18n="heroDescription">
+        Tajribali pedagoglar rahbarligida farzandingiz ingliz tili, rus tili va matematikani o'yin orqali o'rganadi. 4 yoshdan 7 yoshgacha.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#courses" class="btn btn-primary">
+          <span data-i18n="heroBtnCourses">Fanlarni ko'rish</span>
+          <span class="btn-arrow">→</span>
+        </a>
+        <a href="#contact" class="btn btn-outline">
+          <span data-i18n="heroBtnContact">Bog'lanish</span>
+        </a>
+      </div>
+
+      <div class="hero-stats">
+        <div class="stat-item">
+          <div class="stat-number" data-count="300" data-suffix="+">
+            <span class="count-value">0</span><span class="accent">+</span>
+          </div>
+          <div class="stat-label" data-i18n="statStudents">O'quvchilar</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-count="10" data-suffix="+">
+            <span class="count-value">0</span><span class="accent">+</span>
+          </div>
+          <div class="stat-label" data-i18n="statExperience">Yillik tajriba</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-count="3">
+            <span class="count-value">0</span>
+          </div>
+          <div class="stat-label" data-i18n="statCourses">Fanlar</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-count="97" data-suffix="%">
+            <span class="count-value">0</span><span class="accent">%</span>
+          </div>
+          <div class="stat-label" data-i18n="statSuccess">Muvaffaqiyat</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Courses Section -->
+  <section class="courses" id="courses">
+    <div class="container">
+      <div class="courses-header">
+        <div class="section-label" data-i18n="coursesLabel">Bizning fanlar</div>
+        <h2 class="section-title" data-i18n="coursesTitle">O'quv Fanlarimiz</h2>
+        <p class="section-description" data-i18n="coursesDescription">Har bir fan bolaning yosh xususiyatlariga mos ravishda o'yin orqali o'rgatiladi.</p>
+      </div>
+
+      <div class="courses-grid">
+        <!-- English -->
+        <div class="course-card">
+          <div class="course-card-image">
+            <img src="images/course-beginner.png" alt="Ingliz tili" loading="lazy">
+            <span class="course-badge" data-i18n="course1Badge">🇬🇧 English</span>
+          </div>
+          <div class="course-card-body">
+            <h3 data-i18n="course1Title">Ingliz Tili</h3>
+            <p data-i18n="course1Desc">Bolalar ingliz tilini o'yinlar, qo'shiqlar va interaktiv mashg'ulotlar orqali tabiiy ravishda o'rganadilar.</p>
+            <div class="course-meta">
+              <div class="course-meta-item">
+                <span class="icon">⏱</span>
+                <span data-i18n="course1Duration">9 oy</span>
+              </div>
+              <div class="course-meta-item">
+                <span class="icon">👶</span>
+                <span data-i18n="course1Level">4-7 yosh</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Russian -->
+        <div class="course-card">
+          <div class="course-card-image">
+            <img src="images/course-professional.png" alt="Rus tili" loading="lazy">
+            <span class="course-badge" data-i18n="course2Badge">🇷🇺 Русский</span>
+          </div>
+          <div class="course-card-body">
+            <h3 data-i18n="course2Title">Rus Tili</h3>
+            <p data-i18n="course2Desc">Rus tilida gapirish, o'qish va yozishga tayyorgarlik. Ertak va o'yinlar orqali o'rganish.</p>
+            <div class="course-meta">
+              <div class="course-meta-item">
+                <span class="icon">⏱</span>
+                <span data-i18n="course2Duration">9 oy</span>
+              </div>
+              <div class="course-meta-item">
+                <span class="icon">👶</span>
+                <span data-i18n="course2Level">4-7 yosh</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Math -->
+        <div class="course-card">
+          <div class="course-card-image">
+            <img src="images/course-kids.png" alt="Matematika" loading="lazy">
+            <span class="course-badge" data-i18n="course3Badge">🔢 Matematika</span>
+          </div>
+          <div class="course-card-body">
+            <h3 data-i18n="course3Title">Matematika</h3>
+            <p data-i18n="course3Desc">Raqamlar, sanash, geometrik shakllar va mantiqiy fikrlashni o'yin usulida o'rganish.</p>
+            <div class="course-meta">
+              <div class="course-meta-item">
+                <span class="icon">⏱</span>
+                <span data-i18n="course3Duration">9 oy</span>
+              </div>
+              <div class="course-meta-item">
+                <span class="icon">👶</span>
+                <span data-i18n="course3Level">4-7 yosh</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Instructors Section -->
+  <section class="instructors" id="instructors">
+    <div class="container">
+      <div class="instructors-header">
+        <div class="section-label" data-i18n="instructorsLabel">Bizning jamoa</div>
+        <h2 class="section-title" data-i18n="instructorsTitle">Tajribali Pedagoglar</h2>
+        <p class="section-description" data-i18n="instructorsDescription">Bolalar psixologiyasini chuqur biladigan, mehribon va professional ustozlarimiz.</p>
+      </div>
+
+      <div class="instructors-grid">
+        <!-- Instructor 1 -->
+        <div class="instructor-card">
+          <div class="instructor-avatar avatar-1">N</div>
+          <h3 data-i18n="instructor1Name">Nilufar Karimova</h3>
+          <div class="instructor-role" data-i18n="instructor1Role">Ingliz tili o'qituvchisi</div>
+          <p data-i18n="instructor1Desc">CELTA sertifikatiga ega. Bolalarga ingliz tilini o'rgatish bo'yicha 10 yillik tajriba.</p>
+          <div class="instructor-stats">
+            <div class="instructor-stat">
+              <div class="instructor-stat-num">120+</div>
+              <div class="instructor-stat-label" data-i18n="instructorStudents">O'quvchi</div>
+            </div>
+            <div class="instructor-stat">
+              <div class="instructor-stat-num">10</div>
+              <div class="instructor-stat-label" data-i18n="instructorExp">Yil tajriba</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Instructor 2 -->
+        <div class="instructor-card">
+          <div class="instructor-avatar avatar-2">S</div>
+          <h3 data-i18n="instructor2Name">Svetlana Petrova</h3>
+          <div class="instructor-role" data-i18n="instructor2Role">Rus tili o'qituvchisi</div>
+          <p data-i18n="instructor2Desc">Filologiya fanlari nomzodi. Maktabgacha ta'lim bo'yicha 12 yillik tajriba.</p>
+          <div class="instructor-stats">
+            <div class="instructor-stat">
+              <div class="instructor-stat-num">150+</div>
+              <div class="instructor-stat-label" data-i18n="instructorStudents">O'quvchi</div>
+            </div>
+            <div class="instructor-stat">
+              <div class="instructor-stat-num">12</div>
+              <div class="instructor-stat-label" data-i18n="instructorExp">Yil tajriba</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Instructor 3 -->
+        <div class="instructor-card">
+          <div class="instructor-avatar avatar-3">M</div>
+          <h3 data-i18n="instructor3Name">Malika Toshmatova</h3>
+          <div class="instructor-role" data-i18n="instructor3Role">Matematika o'qituvchisi</div>
+          <p data-i18n="instructor3Desc">Maktabgacha ta'lim metodisti. Bolalar matematikasi bo'yicha 8 yillik tajriba.</p>
+          <div class="instructor-stats">
+            <div class="instructor-stat">
+              <div class="instructor-stat-num">100+</div>
+              <div class="instructor-stat-label" data-i18n="instructorStudents">O'quvchi</div>
+            </div>
+            <div class="instructor-stat">
+              <div class="instructor-stat-num">8</div>
+              <div class="instructor-stat-label" data-i18n="instructorExp">Yil tajriba</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section class="gallery" id="gallery">
+    <div class="container">
+      <div class="gallery-header">
+        <div class="section-label" data-i18n="galleryLabel">Galereya</div>
+        <h2 class="section-title" data-i18n="galleryTitle">Bizning Hayotimiz</h2>
+        <p class="section-description" data-i18n="galleryDescription">Mashg'ulotlar, bayramlar va bolalarning eng yaxshi lahzalari.</p>
+      </div>
+
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="images/gallery-1.png" alt="Ijodiy mashg'ulotlar" loading="lazy">
+          <div class="gallery-item-overlay">
+            <span data-i18n="gallery1Caption">Ijodiy mashg'ulotlar</span>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/gallery-2.png" alt="Bayram tadbirlari" loading="lazy">
+          <div class="gallery-item-overlay">
+            <span data-i18n="gallery2Caption">Bayram tadbirlari</span>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/gallery-3.png" alt="Zamonaviy sinf xonalari" loading="lazy">
+          <div class="gallery-item-overlay">
+            <span data-i18n="gallery3Caption">Zamonaviy sinf xonalari</span>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/gallery-4.png" alt="O'yin orqali o'rganish" loading="lazy">
+          <div class="gallery-item-overlay">
+            <span data-i18n="gallery4Caption">O'yin orqali o'rganish</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="contact-wrapper">
+        <!-- Contact Info -->
+        <div class="contact-info">
+          <div class="section-label" data-i18n="contactLabel">Aloqa</div>
+          <h2 data-i18n="contactTitle">Biz Bilan Bog'laning</h2>
+          <p data-i18n="contactDescription">Savollaringiz bormi? Bepul sinov darsiga yoziling!</p>
+
+          <div class="contact-details">
+            <div class="contact-detail-item">
+              <div class="contact-detail-icon">📞</div>
+              <div class="contact-detail-text">
+                <h4 data-i18n="contactPhone">Telefon</h4>
+                <p>+998 90 123 45 67</p>
+              </div>
+            </div>
+
+            <div class="contact-detail-item">
+              <div class="contact-detail-icon">✉️</div>
+              <div class="contact-detail-text">
+                <h4 data-i18n="contactEmail">Elektron pochta</h4>
+                <p>info@aqlvoy.uz</p>
+              </div>
+            </div>
+
+            <div class="contact-detail-item">
+              <div class="contact-detail-icon">📍</div>
+              <div class="contact-detail-text">
+                <h4 data-i18n="contactAddress">Manzil</h4>
+                <p data-i18n="contactAddressValue">Toshkent sh., Yakkasaroy tumani, Ta'lim ko'chasi, 15-uy</p>
+              </div>
+            </div>
+
+            <div class="contact-detail-item">
+              <div class="contact-detail-icon">🕐</div>
+              <div class="contact-detail-text">
+                <h4 data-i18n="contactWorkHours">Ish vaqti</h4>
+                <p data-i18n="contactWorkHoursValue">Dush-Shan: 08:00 - 18:00</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form-wrapper">
+          <form id="contactForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label data-i18n="formName">Ismingiz</label>
+                <input type="text" id="formNameInput" data-i18n-placeholder="formNamePlaceholder" placeholder="To'liq ismingiz" required>
+              </div>
+              <div class="form-group">
+                <label data-i18n="formPhone">Telefon raqamingiz</label>
+                <input type="tel" id="formPhoneInput" data-i18n-placeholder="formPhonePlaceholder" placeholder="+998 90 123 45 67" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label data-i18n="formCourse">Fan tanlang</label>
+              <select id="formCourseSelect">
+                <option value="" data-i18n="formCourseOption">Fanni tanlang</option>
+                <option value="english" data-i18n="course1Title">Ingliz Tili</option>
+                <option value="russian" data-i18n="course2Title">Rus Tili</option>
+                <option value="math" data-i18n="course3Title">Matematika</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label data-i18n="formMessage">Xabaringiz</label>
+              <textarea id="formMessageInput" data-i18n-placeholder="formMessagePlaceholder" placeholder="Bolangizning yoshi va savolingiz..." rows="5"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-submit" data-i18n="formSubmit">
+              Ro'yxatdan o'tish
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <div class="logo-icon">📚</div>
+          <span>Aqlvoy Akademiya</span>
+        </div>
+
+        <div class="footer-links">
+          <a href="#hero" data-i18n="navHome">Bosh sahifa</a>
+          <a href="#courses" data-i18n="navCourses">Fanlar</a>
+          <a href="#instructors" data-i18n="navInstructors">O'qituvchilar</a>
+          <a href="#gallery" data-i18n="navGallery">Galereya</a>
+          <a href="#contact" data-i18n="navContact">Aloqa</a>
+        </div>
+
+        <div class="footer-social">
+          <a href="#" aria-label="Telegram">✈️</a>
+          <a href="#" aria-label="Instagram">📷</a>
+          <a href="#" aria-label="YouTube">▶️</a>
+          <a href="#" aria-label="Facebook">📘</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Aqlvoy Akademiya. <span data-i18n="footerRights">Barcha huquqlar himoyalangan.</span></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" aria-label="Close">✕</button>
+    <img src="" alt="">
+  </div>
+
+  <!-- Scroll to Top -->
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
