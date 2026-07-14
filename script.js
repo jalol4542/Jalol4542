@@ -487,20 +487,60 @@ function initForm() {
     const btn = form.querySelector(".btn-submit");
     const originalText = btn.textContent;
 
+    // Kiritilgan ma'lumotlarni olish
+    const name = document.getElementById("formNameInput").value;
+    const phone = document.getElementById("formPhoneInput").value;
+    const courseSelect = document.getElementById("formCourseSelect");
+    const course = courseSelect.options[courseSelect.selectedIndex].text;
+    const message = document.getElementById("formMessageInput").value;
+
     btn.textContent = currentLang === "uz" ? "Yuborilmoqda..." : currentLang === "ru" ? "Отправка..." : "Sending...";
     btn.disabled = true;
     btn.style.opacity = "0.7";
 
-    setTimeout(() => {
-      btn.textContent = currentLang === "uz" ? "✓ Yuborildi!" : currentLang === "ru" ? "✓ Отправлено!" : "✓ Sent!";
-      btn.style.opacity = "1";
+    // ⚠️ Telegram sozlamalari (Bu yerga Token va Chat ID qo'yiladi)
+    const botToken = "TELEGRAM_BOT_TOKEN";
+    const chatId = "TELEGRAM_CHAT_ID";
 
+    // Xabar matni formati
+    const text = `🔔 *Yangi ariza!* (Aqlvoy Akademiya)\n\n` +
+                 `👤 *Ismi:* ${name}\n` +
+                 `📞 *Telefoni:* ${phone}\n` +
+                 `📚 *Tanlagan fani:* ${course}\n` +
+                 `💬 *Xabari:* ${message || "Yo'q"}`;
+
+    const url = `https://api.telegram.org/bot${botToken}/sendMessage`;
+
+    fetch(url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        chat_id: chatId,
+        text: text,
+        parse_mode: "Markdown"
+      })
+    })
+    .then(response => {
+      if (response.ok) {
+        btn.textContent = currentLang === "uz" ? "✓ Yuborildi!" : currentLang === "ru" ? "✓ Отправлено!" : "✓ Sent!";
+        form.reset();
+      } else {
+        throw new Error("Xatolik");
+      }
+    })
+    .catch(error => {
+      console.error(error);
+      btn.textContent = currentLang === "uz" ? "Xatolik yuz berdi" : currentLang === "ru" ? "Ошибка" : "Error";
+    })
+    .finally(() => {
+      btn.style.opacity = "1";
       setTimeout(() => {
         btn.textContent = originalText;
         btn.disabled = false;
-        form.reset();
-      }, 2000);
-    }, 1500);
+      }, 3000);
+    });
   });
 }
 
