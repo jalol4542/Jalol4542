@@ -499,8 +499,8 @@ function initForm() {
     btn.style.opacity = "0.7";
 
     // ⚠️ Telegram sozlamalari (Bu yerga Token va Chat ID qo'yiladi)
-    const botToken = "TELEGRAM_BOT_TOKEN";
-    const chatId = "TELEGRAM_CHAT_ID";
+    const botToken = "8129819564:AAHmWRqeZSgmQ1Z_Eq5TzUaSHLs93mrPwfg";
+    const chatId = "853802623";
 
     // Xabar matni formati
     const text = `🔔 *Yangi ariza!* (Aqlvoy Akademiya)\n\n` +
